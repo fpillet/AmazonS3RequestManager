@@ -37,7 +37,7 @@ public enum Region: Equatable {
     SAEast1,
     custom(hostName: String, endpoint: String)
     
-    var hostName: String {
+    public var hostName: String {
         switch self {
         case .USStandard: return "us-east-1"
         case .USWest1: return "us-west-1"
@@ -53,7 +53,7 @@ public enum Region: Equatable {
         }
     }
     
-    var endpoint: String {
+    public var endpoint: String {
         switch self {
         case .USStandard: return "s3.amazonaws.com"
         case .USWest1: return "s3-us-west-1.amazonaws.com"
